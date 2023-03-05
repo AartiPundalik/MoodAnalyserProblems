@@ -18,7 +18,16 @@ namespace TestCaseMoodAnalyser
             string result = abilitytoAnalyse.AnalyseMood();
             Assert.AreEqual(result, "happy");
         }
+        [Test]
+        public void GivenNullMood_WhenAnalyzed_ShouldReturnhappy()
+        {
+            AbilityToAnalyze abilitytoAnalyse = new AbilityToAnalyze(null);
+            string result = abilitytoAnalyse.AnalyseMood();
+            Assert.AreEqual(result, "happy");
+        }
     }
 }
+    
+
 
     
