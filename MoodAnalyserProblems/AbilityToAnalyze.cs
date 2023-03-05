@@ -8,7 +8,13 @@ namespace MoodAnalyserProblems
 {
     public class AbilityToAnalyze
     {
-        public string AnalyseMood(string message)
+        string message;
+        public AbilityToAnalyze(string message)
+        {
+            this.message = message;
+        }
+       
+        public string AnalyseMood()
         {
             if (message.Contains("sad"))
             {
@@ -18,9 +24,9 @@ namespace MoodAnalyserProblems
             {
                 return "happy";
             }
-
         }
     }
 }
-    
+
+
 

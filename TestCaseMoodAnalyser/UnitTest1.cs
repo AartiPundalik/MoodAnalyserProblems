@@ -3,20 +3,22 @@ namespace TestCaseMoodAnalyser
 {
     public class Tests
     {
-        AbilityToAnalyze abilitytoAnalyze = new AbilityToAnalyze();
-
+        
         [Test]
-        public void GivenSadMood_WhenAnalyzed_ShouldReturnsad()
+        public void SadMood_WhenAnalyse_ShouldReturnsad()
         {
-            string result = abilitytoAnalyze.AnalyseMood("I Am In sad Mood");
+            AbilityToAnalyze abilitytoAnalyse = new AbilityToAnalyze("I am in sad mood");
+            string result = abilitytoAnalyse.AnalyseMood();
             Assert.AreEqual(result, "sad");
         }
         [Test]
-        public void HappyMood_WhenAnalyse_ShouldReturnSad()
+        public void HappyMood_WhenAnalyse_ShouldReturnhappy()
         {
-            string result = abilitytoAnalyze.AnalyseMood("I am in happy mood");
+            AbilityToAnalyze abilitytoAnalyse = new AbilityToAnalyze("I am in happy mood");
+            string result = abilitytoAnalyse.AnalyseMood();
             Assert.AreEqual(result, "happy");
         }
     }
 }
+
     
