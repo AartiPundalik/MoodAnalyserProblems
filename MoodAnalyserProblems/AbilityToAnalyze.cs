@@ -19,20 +19,26 @@ namespace MoodAnalyserProblems
         {
             try
             {
+
                 if (message.Contains("sad"))
                 {
                     return "sad";
                 }
                 else
+                {
                     return "happy";
+                }
+
             }
             catch (NullReferenceException)
             {
-                throw new CustomeException(CustomeExceptionType.NullMood, "Please do not Enter the Null Input");
+
+                throw new CustomeException(CustomeExceptionType.NullMood, "Message should not be null");
+
             }
         }
-    }
+    } 
 }
-
+    
 
 

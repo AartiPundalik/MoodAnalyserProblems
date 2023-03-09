@@ -23,12 +23,12 @@ namespace TestCaseMoodAnalyser
         {
             try
             {
-                AbilityToAnalyze abilitytoAnalyse = new AbilityToAnalyze(string.Empty);
+                AbilityToAnalyze abilitytoAnalyse = new AbilityToAnalyze(null);
                 string result = abilitytoAnalyse.AnalyseMood();
             }
             catch (CustomeException obj)
             {
-                Assert.AreEqual("Message should not be empty", obj.Message);
+                Assert.AreEqual("Message should not be null", obj.Message);
             }
 
         }
