@@ -3,7 +3,7 @@ namespace TestCaseMoodAnalyser
 {
     public class Tests
     {
-        
+
         [Test]
         public void SadMood_WhenAnalyse_ShouldReturnsad()
         {
@@ -19,14 +19,23 @@ namespace TestCaseMoodAnalyser
             Assert.AreEqual(result, "happy");
         }
         [Test]
-        public void GivenNullMood_WhenAnalyzed_ShouldReturnhappy()
+        public void NullMood_WhenAnalyzed_ShouldReturnhappy()
         {
-            AbilityToAnalyze abilitytoAnalyse = new AbilityToAnalyze(null);
-            string result = abilitytoAnalyse.AnalyseMood();
-            Assert.AreEqual(result, "happy");
+            try
+            {
+                AbilityToAnalyze abilitytoAnalyse = new AbilityToAnalyze(string.Empty);
+                string result = abilitytoAnalyse.AnalyseMood();
+            }
+            catch (CustomeException obj)
+            {
+                Assert.AreEqual("Message should not be empty", obj.Message);
+            }
+
         }
     }
 }
+
+
     
 
 

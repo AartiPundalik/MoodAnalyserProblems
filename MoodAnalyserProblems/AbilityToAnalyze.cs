@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static MoodAnalyserProblems.CustomeException;
 
 namespace MoodAnalyserProblems
 {
@@ -27,7 +28,7 @@ namespace MoodAnalyserProblems
             }
             catch (NullReferenceException)
             {
-                return "happy";
+                throw new CustomeException(CustomeExceptionType.NullMood, "Please do not Enter the Null Input");
             }
         }
     }

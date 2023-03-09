@@ -11,6 +11,7 @@ namespace MoodAnalyserProblems
         static void Main(string[] args)
         {
             AbilityToAnalyze abilitytoAnalyse = new AbilityToAnalyze("I am sad");
+            Console.ReadLine();
         }
     }
 }
