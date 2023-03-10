@@ -46,8 +46,16 @@ namespace TestCaseMoodAnalyser
                 Assert.AreEqual("Message should not be null", obj.Message);
             }
         }
+        [Test]
+        public void GivenMoodAnalyserClassName_ReturnMoodAnalyserObjectoOfThatClass()
+        {
+            object expected = new AbilityToAnalyze();
+            object actual = Reflection.MoodAnalyzer("MoodAnalyserProblems.AbilityToAnalyze", "AbilityToAnalyze");
+            expected.Equals(actual);
+        }
     }
-    }
+}
+    
 
    
     
