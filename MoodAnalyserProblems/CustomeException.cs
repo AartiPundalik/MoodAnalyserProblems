@@ -11,7 +11,7 @@ namespace MoodAnalyserProblems
         public enum CustomeExceptionType
         {
             NullMood,
-            EmptyString
+            EmptyMood
         }
         public CustomeExceptionType Type;
         public CustomeException(CustomeExceptionType Type, string message) : base(message)

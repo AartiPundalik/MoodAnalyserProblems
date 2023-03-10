@@ -9,6 +9,11 @@ namespace MoodAnalyserProblems
 {
     public class AbilityToAnalyze
     {
+        public AbilityToAnalyze()
+        {
+
+        }
+                
         string message;
         public AbilityToAnalyze(string message)
         {
@@ -19,7 +24,6 @@ namespace MoodAnalyserProblems
         {
             try
             {
-
                 if (message.Contains("sad"))
                 {
                     return "sad";
@@ -33,7 +37,7 @@ namespace MoodAnalyserProblems
             catch (NullReferenceException)
             {
 
-                throw new CustomeException(CustomeExceptionType.NullMood, "Message should not be null");
+                throw new CustomeException(CustomeExceptionType.NullMood, "Message Should not be null");
 
             }
         }

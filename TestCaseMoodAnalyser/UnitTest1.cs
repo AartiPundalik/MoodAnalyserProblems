@@ -18,9 +18,11 @@ namespace TestCaseMoodAnalyser
             string result = abilitytoAnalyse.AnalyseMood();
             Assert.AreEqual(result, "happy");
         }
+
         [Test]
         public void NullMood_WhenAnalyzed_ShouldReturnhappy()
         {
+
             try
             {
                 AbilityToAnalyze abilitytoAnalyse = new AbilityToAnalyze(null);
@@ -28,12 +30,28 @@ namespace TestCaseMoodAnalyser
             }
             catch (CustomeException obj)
             {
+                Assert.AreEqual("Message Should not be null", obj.Message);
+            }
+        }
+        [Test]
+        public void GivenEmptyMood_ThrowMoodAnalysisException_EmptyMessage()
+        {
+            AbilityToAnalyze moodAnalyzer = new AbilityToAnalyze("");
+            try
+            {
+                string result = moodAnalyzer.AnalyseMood();
+            }
+            catch (CustomeException obj)
+            {
                 Assert.AreEqual("Message should not be null", obj.Message);
             }
-
         }
     }
-}
+    }
+
+   
+    
+
 
 
     
